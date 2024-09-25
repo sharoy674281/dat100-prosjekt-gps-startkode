@@ -5,12 +5,8 @@ import no.hvl.dat100ptc.oppgave1.GPSPoint;
 
 public class GPSDataConverter {
 
-	// konverter tidsinformasjon i gps data punkt til antall sekunder fra midnatt
-	// dvs. ignorer information om dato og omregn tidspunkt til sekunder
-	// Eksempel - tidsinformasjon (som String): 2017-08-13T08:52:26.000Z
-    // skal omregnes til sekunder (som int): 8 * 60 * 60 + 52 * 60 + 26 
 	
-	private static int TIME_STARTINDEX = 11; // posisjon for start av tidspunkt i timestr
+	private static int TIME_STARTINDEX = 11; 
 
 	public static int toSeconds(String timestr) {
 		
@@ -18,11 +14,7 @@ public class GPSDataConverter {
 		int hr, min, sec;
 		
 		// TODO
-		// OPPGAVE - START
-		
 		throw new UnsupportedOperationException(TODO.method());
-
-		// OPPGAVE - SLUTT
 		
 	}
 
@@ -30,12 +22,9 @@ public class GPSDataConverter {
 
 		GPSPoint gpspoint;
 
-		// TODO - START ;
-		
+		// TODO 
 		throw new UnsupportedOperationException(TODO.method());
-
-		// OPPGAVE - SLUTT ;
-	    
+		
 	}
 	
 }

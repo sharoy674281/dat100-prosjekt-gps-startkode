@@ -5,14 +5,13 @@ import no.hvl.dat100ptc.TODO;
 public class GPSPoint {
 
 	// TODO - objektvariable
-		
+	
 	public GPSPoint(int time, double latitude, double longitude, double elevation) {
 
-		// TODO - konstruktør
+		// TODO - konstruktur
 
-		// Fjern linjene med throw new etterhvert som metodene implementeres
 		throw new UnsupportedOperationException(TODO.construtor("GPSPoint"));
-
+		
 	}
 
 	// TODO - get/set metoder
@@ -25,12 +24,13 @@ public class GPSPoint {
 	public void setTime(int time) {
 				
 		throw new UnsupportedOperationException(TODO.method());
-
+		
 	}
 
 	public double getLatitude() {
 		
 		throw new UnsupportedOperationException(TODO.method());
+		
 		
 	}
 
@@ -68,11 +68,9 @@ public class GPSPoint {
 		
 		String str;
 		
-		// TODO - start
-
 		throw new UnsupportedOperationException(TODO.method());
 
-		// TODO - slutt
+		// TODO
 		
 	}
 }

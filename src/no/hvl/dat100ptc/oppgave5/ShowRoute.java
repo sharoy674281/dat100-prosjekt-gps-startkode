@@ -3,10 +3,11 @@ package no.hvl.dat100ptc.oppgave5;
 import javax.swing.JOptionPane;
 
 import easygraphics.EasyGraphics;
-import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 import no.hvl.dat100ptc.oppgave3.GPSUtils;
 import no.hvl.dat100ptc.oppgave4.GPSComputer;
+
+import no.hvl.dat100ptc.TODO;
 
 public class ShowRoute extends EasyGraphics {
 
@@ -16,6 +17,10 @@ public class ShowRoute extends EasyGraphics {
 
 	private GPSPoint[] gpspoints;
 	private GPSComputer gpscomputer;
+	
+	private double minlon, minlat, maxlon, maxlat;
+
+	private double xstep, ystep;
 	
 	public ShowRoute() {
 
@@ -34,42 +39,34 @@ public class ShowRoute extends EasyGraphics {
 
 		makeWindow("Route", MAPXSIZE + 2 * MARGIN, MAPYSIZE + 2 * MARGIN);
 
+		minlon = GPSUtils.findMin(GPSUtils.getLongitudes(gpspoints));
+		minlat = GPSUtils.findMin(GPSUtils.getLatitudes(gpspoints));
+
+		maxlon = GPSUtils.findMax(GPSUtils.getLongitudes(gpspoints));
+		maxlat = GPSUtils.findMax(GPSUtils.getLatitudes(gpspoints));
+		
+		xstep = scale(MAPXSIZE, minlon, maxlon);
+		ystep = scale(MAPYSIZE, minlat, maxlat);
+		
 		showRouteMap(MARGIN + MAPYSIZE);
+
+		replayRoute(MARGIN + MAPYSIZE);
 		
 		showStatistics();
 	}
 
-	// antall x-pixels per lengdegrad
-	public double xstep() {
+	public double scale(int maxsize, double minval, double maxval) {
 
-		double maxlon = GPSUtils.findMax(GPSUtils.getLongitudes(gpspoints));
-		double minlon = GPSUtils.findMin(GPSUtils.getLongitudes(gpspoints));
+		double step = maxsize / (Math.abs(maxval - minval));
 
-		double xstep = MAPXSIZE / (Math.abs(maxlon - minlon)); 
-
-		return xstep;
-	}
-
-	// antall y-pixels per breddegrad
-	public double ystep() {
-	
-		double ystep;
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - SLUTT
-		
+		return step;
 	}
 
 	public void showRouteMap(int ybase) {
 
-		// TODO - START
-		
+		// TODO 
 		throw new UnsupportedOperationException(TODO.method());
 		
-		// TODO - SLUTT
 	}
 
 	public void showStatistics() {
@@ -79,11 +76,16 @@ public class ShowRoute extends EasyGraphics {
 		setColor(0,0,0);
 		setFont("Courier",12);
 		
-		// TODO - START
-		
+		// TODO
 		throw new UnsupportedOperationException(TODO.method());
 		
-		// TODO - SLUTT;
+	}
+
+	public void replayRoute(int ybase) {
+
+		// TODO 
+		throw new UnsupportedOperationException(TODO.method());
+		
 	}
 
 }

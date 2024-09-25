@@ -3,12 +3,12 @@ package no.hvl.dat100ptc.oppgave6;
 import javax.swing.JOptionPane;
 
 import easygraphics.*;
-import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 import no.hvl.dat100ptc.oppgave2.GPSData;
 import no.hvl.dat100ptc.oppgave2.GPSDataFileReader;
 import no.hvl.dat100ptc.oppgave3.GPSUtils;
 import no.hvl.dat100ptc.oppgave4.GPSComputer;
+import no.hvl.dat100ptc.TODO;
 
 public class CycleComputer extends EasyGraphics {
 
@@ -45,6 +45,8 @@ public class CycleComputer extends EasyGraphics {
 
 	public void run() {
 
+		// throw new UnsupportedOperationException(TODO.method());
+		
 		N = gpspoints.length; // number of gps points
 
 		minlon = GPSUtils.findMin(GPSUtils.getLongitudes(gpspoints));
@@ -64,21 +66,43 @@ public class CycleComputer extends EasyGraphics {
 
 	}
 
-	
+	// main method to visualise route, position, and current speed/time
 	public void bikeRoute() {
 
 		throw new UnsupportedOperationException(TODO.method());
-
+		
 	}
 
 	public double xstep() {
 
 		throw new UnsupportedOperationException(TODO.method());
+	
 	}
 
 	public double ystep() {
 
 		throw new UnsupportedOperationException(TODO.method());
+		
+	}
+    
+	// show current speed and time (i'th GPS point)
+	public void showCurrent(int i) {
+		
+		throw new UnsupportedOperationException(TODO.method());
+		
 	}
 
+	// show current height (i'th GPS point)
+	public void showHeight(int ybase, int i) {
+		
+		throw new UnsupportedOperationException(TODO.method());
+		
+	}
+	
+	// show current position (i'th GPS point)
+	public void showPosition(int i) {
+
+		throw new UnsupportedOperationException(TODO.method());
+		
+	}
 }
