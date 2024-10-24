@@ -98,26 +98,18 @@ public class GPSUtils {
 	}
 
 	public static String formatTime(int secs) {
-
-		String timestr;
-		String TIMESEP = ":";
-
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO 
-		
+		int timer = secs / 3600;
+		int timerRest = secs % 3600;
+		int minutter = timerRest / 60;
+		int sekunder = timerRest % 60;
+		String tiden = String.format("  %02d:%02d:%02d", timer, minutter, sekunder);
+		return tiden;
 	}
-	
+
 	private static int TEXTWIDTH = 10;
 
 	public static String formatDouble(double d) {
-
-		String str;
-
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO
-		
+		String summen = String.format("%10.2f", d);
+		return summen;
 	}
 }
